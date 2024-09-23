@@ -1,0 +1,48 @@
+# Go specific ignores
+bin/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Dependency directories (vendor/)
+vendor/
+
+# Go module files
+go.sum
+go.work
+go.work.sum
+
+# IDE/editor specific ignores
+
+# Emacs backup files (~ and .#)
+*~
+.#*
+
+# Vim swap files
+*.swp
+
+# VSCode files
+.vscode/
+.code-workspace
+
+# MacOS files
+.DS_Store
+
+# Linux file system
+*.lock
+*~
+
+# Logs and databases
+*.log
+*.db
+*.sqlite
+
+# Build files
+/dist/
+/build/
+*.o
+*.a
+*.out
