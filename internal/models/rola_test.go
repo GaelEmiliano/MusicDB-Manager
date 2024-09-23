@@ -1,4 +1,4 @@
-package model
+package models
 
 import (
 	"testing"
@@ -8,13 +8,26 @@ import (
 func TestNewRola(t *testing.T) {
 	rola := NewRola()
 	expecting := "Unknown"
-	assertEqual(t, rola.Artist(), expecting, "artist")
-	assertEqual(t, rola.Title(), expecting, "title")
-	assertEqual(t, rola.Album(), expecting, "album")
-	assertEqual(t, rola.Track(), 0, "track")
-	assertEqual(t, rola.Year(), 2024, "year")
-	assertEqual(t, rola.Genre(), expecting, "genre")
-	assertEqual(t, rola.Path(), expecting, "path")
+	assertEqual(t, rola.GetArtist(), expecting, "artist")
+	assertEqual(t, rola.GetTitle(), expecting, "title")
+	assertEqual(t, rola.GetAlbum(), expecting, "album")
+	assertEqual(t, rola.GetTrack(), 0, "track")
+	assertEqual(t, rola.GetYear(), 2024, "year")
+	assertEqual(t, rola.GetGenre(), expecting, "genre")
+	assertEqual(t, rola.GetPath(), expecting, "path")
+}
+
+// Test for getters
+func TestGetters(t *testing.T) {
+	rola := NewRola()
+	expecting := "Unknown"
+	assertEqual(t, rola.GetArtist(), expecting, "artist")
+	assertEqual(t, rola.GetTitle(), expecting, "title")
+	assertEqual(t, rola.GetAlbum(), expecting, "album")
+	assertEqual(t, rola.GetTrack(), 0, "track")
+	assertEqual(t, rola.GetYear(), 2024, "year")
+	assertEqual(t, rola.GetGenre(), expecting, "genre")
+	assertEqual(t, rola.GetPath(), expecting, "path")
 }
 
 // Auxiliar function to compare expected and received values
