@@ -20,7 +20,7 @@ func TestGetGenreInstance(t *testing.T) {
 
 func TestGetValidGenre(t *testing.T) {
 	genre := GetGenre()
-
+	// Test for valid genre codes
 	tests := map[string]string{
 		"0":  "Blues",
 		"1":  "Classic Rock",
