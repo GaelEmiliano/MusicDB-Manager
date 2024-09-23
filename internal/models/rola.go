@@ -1,6 +1,6 @@
 // Package models provides definitions and operations related
 // to music tracks.
-// It includes structures and functions to handle track information
+// It includes structures and methods to handle track information
 // such as artis, title album, track number, year, genre, and the file path.
 package models
 
