@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-// Test for creating a new rola with default values
+// Test for creating a new rola with default values.
 func TestNewRola(t *testing.T) {
 	rola := NewRola()
 	expecting := "Unknown"
@@ -17,7 +17,7 @@ func TestNewRola(t *testing.T) {
 	assertEqual(t, rola.GetPath(), expecting, "path")
 }
 
-// Test for all getters methods in Rola
+// Test for all getters methods in Rola.
 func TestGetters(t *testing.T) {
 	rola := NewRola()
 	expecting := "Unknown"
@@ -30,7 +30,7 @@ func TestGetters(t *testing.T) {
 	assertEqual(t, rola.GetPath(), expecting, "path")
 }
 
-// Test for all setters methods in Rola
+// Test for all setters methods in Rola.
 func TestSetters(t *testing.T) {
 	rola := NewRola()
 	artist := "Frank Sinatra"
@@ -58,7 +58,7 @@ func TestSetters(t *testing.T) {
 	assertEqual(t, rola.GetPath(), path, "path")
 }
 
-// Auxiliar function to compare expected and received values
+// Auxiliar function to compare expected and received values.
 func assertEqual(t *testing.T, received, expected interface{}, fieldName string) {
 	if received != expected {
 		t.Errorf("expecting %v for field %s, received %v", expected, fieldName, received)
