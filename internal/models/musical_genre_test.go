@@ -1,25 +1,23 @@
 package models
 
-import (
-	"testing"
-)
+import "testing"
 
 func TestGetGenreInstance(t *testing.T) {
 	// Verify that the singleton instance is created
-	genre1 := GetGenre()
+	genre1 := ObtainGenre()
 	if genre1 == nil {
 		t.Error("expected non-nil instance of genre, got nil")
 	}
 	// Verify that calling GetGenreInstance() multiple times returns
 	// the same instance
-	genre2 := GetGenre()
+	genre2 := ObtainGenre()
 	if genre1 != genre2 {
 		t.Error("expected the same instance of genre to be returned on multiple calls")
 	}
 }
 
 func TestGetValidGenre(t *testing.T) {
-	genre := GetGenre()
+	genre := ObtainGenre()
 	// Test for valid genre codes
 	tests := map[string]string{
 		"0":  "Blues",

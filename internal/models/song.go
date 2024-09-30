@@ -1,7 +1,3 @@
-// Package models provides definitions and operations related
-// to music tracks.
-// It includes structures and methods to handle track information
-// such as artis, title album, track number, year, genre, and the file path.
 package models
 
 const (
@@ -13,16 +9,16 @@ const (
 	defaultID = 0
 )
 
-// Song represents a song with various attributes extracted from id3v2 tags.
+// Song represents a song with various attributes extracted from ID3v2.3 tags.
 type Song struct {
-	artist string
-	title  string
-	album  string
-	track  int
-	year   int
-	genre  string
-	path   string
-	id     int64
+	artist string // Artist name (performer of the song)
+	title  string // Tittle of the song
+	album  string // Album name where the song belongs
+	track  int    // Track number in the album
+	year   int    // Year when the song was released
+	genre  string // Genre of the song (e.g. Pop, Rock)
+	path   string // File path of the mp3 file
+	id     int64  // ID in the database (used for stored the song)
 }
 
 // NewSong creates and returns a new Song with default values.

@@ -1,8 +1,6 @@
 package models
 
-import (
-	"testing"
-)
+import "testing"
 
 // Test for creating a new song with default values.
 func TestNewSong(t *testing.T) {

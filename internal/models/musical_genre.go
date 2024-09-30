@@ -1,10 +1,8 @@
 package models
 
-const (
-	emptyString = ""
-)
+const emptyString = ""
 
-// Genre is a simple translator for ID3v1 genre codes, it contains
+// Genre is a simple translator for ID3v2.3 genre codes, it contains
 // a single dictionary with the codes as keys and the corresponding
 // genres as value (both are strings). It is a singleton.
 type Genre struct {
@@ -14,9 +12,9 @@ type Genre struct {
 // The instance of the genres map.
 var instance *Genre
 
-// GetGenre returns the singleton instance of Genre. The  implementation
+// ObtainGenre returns the singleton instance of Genre. The  implementation
 // of the singleton is not thread-safe due to conflicts with gtk.
-func GetGenre() *Genre {
+func ObtainGenre() *Genre {
 	if instance == nil {
 		genres := make(map[string]string)
 		// Add items to the map
@@ -103,17 +101,15 @@ func GetGenre() *Genre {
 
 		instance = &Genre{genres}
 	}
-
 	return instance
 }
 
-// Get receives a string corresponding to an ID3v1 genre code
+// Get receives a string corresponding to an ID3v2.3 genre code
 // and returns the corresponding genre.
 func (genre *Genre) Get(code string) string {
 	name := genre.genres[code]
 	if name == emptyString {
 		return code
 	}
-
 	return name
 }
